@@ -1,0 +1,40 @@
+/* components/case/case.wxss */
+.case {
+  width: 100%;
+  height: 100%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.container {
+    /* height: 235px; */
+    border: 1px solid #dad5d5;
+    border-radius: 2%;
+    box-sizing: border-box;
+    background-color:#ffffff;
+}
+.sponsor {
+    font-size: 14px;
+    color: #c51f05;
+}
+.header {
+    height: 147px;
+}
+.header image {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+}
+.bd {
+    /* height: 56px; */
+    padding: 16px 20px 16px 20px;
+}
+.describe {
+    margin: 8px 0 8px 0;
+    font-size: 17px;
+}   
+.prize-day {
+    font-size: 12px;
+    opacity: 0.7;
+}

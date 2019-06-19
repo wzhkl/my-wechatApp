@@ -1,0 +1,27 @@
+<!--miniprogram/pages/allDraw/allDraw.wxml-->
+<view class="page">
+  <view class="container">
+    <view class="waited">
+      <view class="waited-header">待开奖</view>
+      <view class="waited-body">
+        <case prize="{{prize}}">
+        
+        </case>
+      </view>
+    </view>
+
+    <view class="over">
+      <view class="over-title">已结束</view>
+      <block wx:for="{{prize}}" wx:key="index">
+        <view class="over-prize">
+          <text class="prize" decode="{{true}}">奖品:&ensp;{{item.describe}}</text>
+          <view class="right">
+            <text class="prizeDay" decode="{{true}}">{{item.prizeDay}}&emsp;</text>
+            <image src="../../images/youjiantou.png" />
+          </view>
+          
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

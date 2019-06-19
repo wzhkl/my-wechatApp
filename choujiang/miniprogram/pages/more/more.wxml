@@ -1,0 +1,32 @@
+<!-- miniprogram/pages/more/more.wxml -->
+<view class="page">
+  <view class="container">
+    <view class="address item">
+      <view class="left">
+        <image src="../../images/address.png" />
+        <span class="text">收货地址</span>
+      </view>
+      <view class="right">
+        <image src="../../images/youjiantou.png" />
+      </view>
+    </view>
+    <view class="complain item">
+      <view class="left">
+        <image src="../../images/complain.png" />
+        <span class="text manage">投诉管理</span>
+      </view>
+      <view class="right">
+        <image src="../../images/youjiantou.png" />
+      </view>
+    </view>
+    <view class="question item">
+      <view class="left">
+        <image src="../../images/questions.png" />
+        <span class="text">常见问题</span>
+      </view>
+      <view class="right">
+        <image src="../../images/youjiantou.png" />
+      </view>
+    </view>
+  </view>
+</view>

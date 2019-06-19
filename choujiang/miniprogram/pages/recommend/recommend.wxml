@@ -1,0 +1,12 @@
+<!--miniprogram/pages/recommend/recommend.wxml-->
+<view class="page">
+  <view class="container">
+     <span>好像没什么小程序推荐的~~</span>
+  <view class="title">
+    推荐一个小哥哥吧
+  </view>
+  <view class="qq">QQ: 1667206227</view>
+  <view class="wx">Wechat: H1667206227</view>
+  </view>
+ 
+</view>

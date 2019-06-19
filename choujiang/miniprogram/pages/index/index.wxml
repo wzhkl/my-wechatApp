@@ -1,0 +1,39 @@
+<!-- index.wxml -->
+<view class="container">
+    <view class="head">
+        <view class="top">
+            <view class="wish" bindtap='goSignIn'>
+                <image class="heart" src="../../images/heart.png" />
+                <!-- <view class="wishNum"> -->
+                    <text decode="{{true}}" class="wishNum"> {{wishNum}} 心愿</text>
+                <!-- </view> -->
+            </view>
+            <view class="goSignIn" bindtap='goSignIn'>
+                <text>去签到</text>
+                <image class="youjiantou" src="../../images/youjiantou.png" />
+            </view>
+        </view>
+        <view class="below">
+            <text class='fuli'>每日福利</text>
+            <view class='below_right'>
+              <view class="enterIndex" bindtap='upIndex'>
+                我要上首页
+              </view>
+            <text decode="{{true}}">&emsp;|</text>
+            <!-- <view class="share" bindtap='goShare'>分享</view> -->
+            <button open-type='share'>分享</button>
+            </view>
+        </view>
+    </view>
+    <view class="body" bindtap='goDrawPrize'>
+        <case prize="{{prize}}" id="case">
+
+        </case>
+    </view>
+    <view class="foot">
+      <button class='button' open-type="contact" bindcontact="handleContact">
+        <text>联系客服</text>
+        <image src='../../images/youjiantou.png' />
+      </button>
+    </view>
+</view>

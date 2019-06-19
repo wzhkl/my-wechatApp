@@ -1,0 +1,84 @@
+/**index.wxss**/
+.container {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.head {
+  width: 100%;
+  height: 100%;
+}
+.top {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #dbdbdb; 
+  box-sizing: border-box;
+  font-size: 14px;
+  position: relative;
+  /* margin-right: 15px;
+  margin-left: 15px; */
+}
+.heart,.youjiantou {
+  height: 15px;
+  width: 15px;
+}
+.wishNum {
+  margin-left: 5px;
+}
+.goSignIn {
+  height: 24px;
+  position: absolute;
+  right: 0;
+  opacity: 0.7;
+}
+.below {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  font-size: 14px;
+  /* margin-right: 15px;
+  margin-left: 15px; */
+}
+.below_right button::after {
+  border: none;
+}
+.below_right button {
+  font-size: 14px;
+  background-color: #f0f0f0;
+  line-height: 1.5555555600000004;
+}
+.fuli {
+  font-size: 20px;
+  color: #cc3923;
+  font-weight:bold;
+}
+.below_right {
+  display: flex;
+  position: absolute;
+  right: 0;
+  opacity: 0.7;
+}
+.body {
+  width: 100%;
+}
+.button {
+  display: flex;
+  align-items: center;
+  background: #f0f0f0;
+}
+.button text {
+  font-size: 12px;
+}
+.foot button::after{
+border:none;
+}
+.button image {
+  height: 15px;
+  width: 15px;
+}
+
+

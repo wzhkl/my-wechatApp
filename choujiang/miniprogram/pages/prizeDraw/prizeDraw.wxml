@@ -1,0 +1,89 @@
+<!-- miniprogram/pages/prizeDraw/prizeDraw.wxml -->
+<view class="pg">
+  <view class="container">
+    <view class="top" style="background:url('{{drawBgUrl}}'); background-size: 100% 100%;">
+      <!-- <wux-upload class="upload" style="width:30px; height:30px;" listType="picture-card" defaultFileList="{{ fileList }}" max="4" url="https://www.skyvow.cn/api/common/file" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview">
+        <text>上传图片</text>
+      </wux-upload> -->
+      <view class="po-top" bindtap='doUpload'>
+        <view class="choose">
+          <view class="icon">
+            <image src="../../images/img.png" />
+          </view>
+          <view class="imgUpload">上传图片</view>
+        </view>
+      </view>
+    </view>
+    <view class="wux">
+      <wux-cell hover-class="none" style="font-size: 16px; width: 100%;">
+        <wux-input label="奖品名称" placeholder="请输入奖品名称" placeholder-style="margin: 0;" />
+      </wux-cell>
+      <wux-cell hover-class="none" style="font-size: 16px; width: 100%;">
+        <wux-input style="margin-right: 0;" class="top_name" extra="个" label="奖品份数" placeholder="份数" />
+      </wux-cell>
+    </view>
+
+    <view class="time">
+      <view class="timeTop">
+        <view class="timeTop-left">到达设定时间自动开奖</view>
+        <view class="timeTop-right">
+          <text decode="true">修改开奖条件</text>
+          <!-- <view class="youjiantou"> -->
+          <image class="youjiantou" src="../../images/youjiantou.png" />
+          <!-- </view> -->
+        </view>
+      </view>
+      <view class="prizeTime">
+        <wux-calendar id="wux-calendar" />
+        <wux-cell class="calendar" title="开奖时间" extra="{{ value1 }}" bind:click="openCalendar1"></wux-cell>
+        <image class="youjiantou" src="../../images/youjiantou.png" />
+      </view>
+    </view>
+    <view class="more">
+      <view class="describe">
+        <view class="describe-top">更多功能</view>
+        <view class="describe-bottom">自定义抽奖说明</view>
+      </view>
+      <view class="switch">
+        <wux-switch name="a" slot="footer" value="{{ischoose}}" bind:change="onChange1" />
+      </view>
+    </view>
+    <block wx:if="{{ischoose}}">
+      <input type="text" style='position:relative;' placeholder="填写此次抽奖的说明" />
+    </block>
+    <view class="others">
+      <wux-divider text="其他抽奖功能" />
+      <view class="otherFunc">
+        <view class="otherFunc1 game">
+          <view class="avater">
+            <image src="../../images/piyiixia.png" />
+          </view>
+          <view class="name">皮一下</view>
+        </view>
+        <view class="otherFunc2 game">
+          <view class="avater">
+            <image src="../../images/gaojiban.png" />
+          </view>
+          <view class="name">高级版</view>
+        </view>
+        <view class="otherFunc3 game">
+          <view class="avater">
+            <image src="../../images/zizhu.png" />
+          </view>
+          <view class="name">自助上首页</view>
+        </view>
+        <view class="otherFunc4 game">
+          <view class="avater">
+            <image src="../../images/nowprize.png" />
+          </view>
+          <view class="name">现场抽奖</view>
+        </view>
+      </view>
+    </view>
+
+    
+  </view>
+</view>
+<view class="bottom">
+  <button class="initiate">发起新抽奖</button>
+</view>

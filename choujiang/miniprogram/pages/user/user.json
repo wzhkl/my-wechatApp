@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wux-divider": "../../components/dist/divider/index"
+  },
+  "navigationBarTitleText": "我的"
+}

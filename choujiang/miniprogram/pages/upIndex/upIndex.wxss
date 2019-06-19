@@ -1,0 +1,85 @@
+/* miniprogram/pages/upIndex/upIndex.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+}
+.box {
+  margin: 15px;
+  padding: 15px;
+}
+.daily {
+  border: 1px solid #fcecea;
+}
+.selfHelp {
+  border: 1px solid #b67e3e;
+}
+.top {
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.body {
+  margin: 15px 0;
+  font-size: 16px;
+}
+.describe {
+  padding-bottom: 15px;
+}
+.flex {
+  display: flex;
+  margin-top: 20px;
+}
+.left {
+  flex: 1;
+}
+.right {
+  flex: 1;
+}
+.flex image, .last image {
+  width: 15px;
+  height: 15px;
+}
+.footer {
+  border-color: #ffffff;
+}
+.contact {
+  width:100px;
+  padding: 10px;
+  background-color: #fcecea;
+  color: #ec382a;
+  position: relative;
+  margin:10px 0;
+}
+.submit {
+  padding: 10px;
+  background-color: #fbf3d9;
+  color: #b67e3e;
+  position: relative;
+  margin:10px 0;
+  width:100px;
+}
+.contact image, .submit image {
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+  /* position: absolute; */
+  right: 0;
+}
+.share image {
+  width: 20px;
+  height: 20px;
+  vertical-align:middle;
+}
+.share button {
+  font-size: 12px;
+  background-color: #fff;
+}
+.button-hover {
+  background-color: #fff;
+}
+button::after{
+  border: none;
+}
+.last {
+  margin: 20px;
+}

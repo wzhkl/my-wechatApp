@@ -1,0 +1,15 @@
+<!--components/case/case.wxml-->
+<view class="case" bindtap='attach' wx:for="{{prize}}" wx:key="index">
+    <view class="container">
+        <view class="header">
+            <image src="{{item.indexImgUrl}}" mode="scaleToFill" />
+        </view>
+        <view class="bd">
+            <view class="sponsor">{{item.sponsor}}<text decode="{{true}}"> 赞助</text></view>
+            <view class="describe">
+                <text decode="{{true}}">奖品: {{item.describe}}</text>
+            </view>
+            <view class="prize-day">{{item.prizeDay}}<text decode="{{true}}">&emsp;自动开奖</text></view>
+        </view>
+    </view>
+</view>

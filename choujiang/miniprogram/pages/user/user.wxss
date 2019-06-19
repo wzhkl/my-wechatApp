@@ -1,0 +1,116 @@
+/* miniprogram/pages/user/user.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+.page, .container {
+  font-size: 16px;
+}
+.header {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+.header-top {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  align-items:center;
+  /* position: relative; */
+}
+button {
+  background-color: #fff;
+  position:relative;
+  top:5px;
+}
+.button-hover {
+  background-color: #fff;
+}
+button::after{
+  border: none;
+}
+.username {
+  margin-left: 5px;
+  position: relative;
+  bottom: 15px;
+}
+.wish {
+  margin-bottom: 10px;
+  color: #b67e3e;
+  position: relative;
+  flex: 1;
+}
+.wishInner {
+  position: relative;
+  left: 135px;
+}
+.userInfo image {
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+}
+.wish image {
+  width: 15px;
+  height: 15px;
+}
+.header-bottom {
+  width: 100%;
+  /* padding: 5px; */
+  margin-bottom:10px;
+  display: flex;
+}
+.header-bottom-item {
+  flex: 1;
+  text-align: center;
+}
+.allDrawNum, .launchNum, .winningNum {
+  margin-bottom: 5px;
+}
+.launch {
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+.txt {
+  font-size: 12px;
+  opacity: 0.6;
+}
+.body {
+  width: 100%;
+}
+.case {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  position:relative;
+  padding: 10px;
+}
+.case image {
+  width: 20px;
+  height: 20px;
+  vertical-align:bottom;
+}
+.left {
+  text-align: center;
+}
+.right {
+  flex: 1;
+  position: absolute;
+  right: 0;
+}
+.right .describe {
+  opacity: 0.6;
+}
+.officialMall, .advanced, .recommend, .more {
+  border-top: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+.peopleNum {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+}
+

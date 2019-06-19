@@ -1,0 +1,100 @@
+<!--miniprogram/pages/upIndex/upIndex.wxml-->
+<view class="container">
+  <view class="box daily">
+    <view class="top">每日福利</view>
+    <view class="body">
+      <view class="describe">
+      针对企业合作伙伴开放，进行品牌宣传与产品推介，按天展示在首页「每日福利」模块。如有意向，请点击下方联系我们。
+      </view>
+      <view class="func">
+        <view class="flex">
+          <view class="left">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 首页顶部展位</text>
+          </view>
+          <view class="right">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 小程序跳转引流</text>
+          </view>
+        </view>
+        <view class="flex">
+          <view class="left">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 优惠券奖品</text>
+          </view>
+          <view class="right">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 公众号宣传</text>
+          </view>
+        </view>
+        <view class="flex">
+          <view class="left">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 专人咨询</text>
+          </view>
+          <view class="right">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 按天展示</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="contact">
+        <text decode="{{true}}"> 联系我们</text>
+        <image src="../../images/youjiantouRed.png" />
+      </view>
+    </view>
+    
+  </view>
+
+  <view class="box selfHelp">
+    <view class="top">自助福利</view>
+    <view class="body">
+      <view class="describe">
+      个人和企业均可投放。完成流程后提交，可推广抽奖展示在首页「自助福利」模块，获得曝光和关注，以固定展示天数开奖。
+      </view>
+      <view class="func">
+        <view class="flex">
+          <view class="left">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 首页自助展位</text>
+          </view>
+          <view class="right">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 插入小程序码</text>
+          </view>
+        </view>
+        <view class="flex">
+          <view class="left">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 微信号复制</text>
+          </view>
+          <view class="right">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 专人审核</text>
+          </view>
+        </view>
+        
+          <view class="last">
+            <image src="../../images/yes.png" />
+            <text decode="{{true}}"> 以固定展示天数开奖</text>
+          </view>
+          
+      </view>
+    </view>
+    <view class="footer">
+      <view class="submit">
+        <text decode="{{true}}">自助提交</text>
+        <image src="../../images/youjiantouZ.png" />
+      </view>
+    </view>
+    
+  </view>
+  <view class="share">
+      <button open-type='share'>
+        <text decode='{{true}}'>分享给朋友  </text>
+        <image src='../../images/youjiantou.png' />
+      </button>
+    </view>
+</view>

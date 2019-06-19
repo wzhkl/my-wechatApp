@@ -1,0 +1,22 @@
+<!--miniprogram/pages/balance/balance.wxml-->
+<view class="page">
+  <view class="container">
+    <view class="header">
+      <view class="balance">
+        <view class="title">当前余额</view>
+        <view class="num">￥ {{balance}}</view>
+      </view>
+    </view>
+    <view class="body">
+      <view class="details">余额不能用于红包抽奖、高级版抽奖。每人每天限提1笔，最小1元，最大2000元。</view>
+      <view class="query">
+        <view class="goPublic">去公众号提现</view>
+        <view class="trade">交易记录</view>
+      </view>
+    </view>
+    <view class="bottom">
+      <text>未收到提现超过2个工作日？</text>
+      <button open-type="contact" bindcontact="handleContact">联系我们</button>
+    </view>
+  </view>
+</view>

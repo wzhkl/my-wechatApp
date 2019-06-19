@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "case": "../../components/case/case"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "全部抽奖"
+}

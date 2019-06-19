@@ -1,0 +1,99 @@
+<!-- miniprogram/pages/signIn/signIn.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="left">
+      <view class="heart">
+        <image src="../../images/signInHeart.png" />
+      </view>
+      <view class="heartDetails">
+        <view class="num">{{wishNum}}</view>
+        <view class="details" bindtap='goDetail'>
+          <view class='wish'>心愿值明细</view>
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="right">
+    <view class="makeWish">
+      <image src="../../images/xuyuan.png" />
+      <view class='hope'>心愿许愿</view>
+    </view>
+  </view>
+  <view class='middle'>
+    <view class='getDream'>
+      <view class='getDream-top'>
+        <view class='top-left'>连续签到七天领取33心愿</view>
+        <view class='top-right'>
+          <view class="rule" bindtap='goDeclare'>
+            <view class='wish'>规则说明</view>
+            <image src="../../images/youjiantou.png" />
+          </view>
+        </view>
+      </view>
+      <view class='getDream-bd'>
+        <view class='days'>
+          <view class='day' wx:for="{{daily}}" wx:key="index">
+            <view class="dayNum">第{{item.dayNum}}天</view>
+            <view class="wishNum">{{item.wishNum}}</view>
+            <block wx:if="{{gotIt}}">
+              <view class='got'>已领取</view>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class="getDream-ft">
+        <block wx:if="{{signInStatus}}">
+          <button hover-class="button-hover" bindtap='signInGet'>签到领取心愿</button>
+        </block>
+        <block wx:else>
+          <button disable='true' plain='true'>已签到,明日再来</button>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='task'>
+      <view class='footer-title'>
+        <view class='title'>任务</view>
+      </view>
+      <view class='taskList'>
+      <block wx:for="{{task}}" wx:key="index">
+      <view class='flex'>
+        <view class='taskDetail'>
+          <view class='work'>{{item.work}}</view>
+          <text class='condition'>+{{item.riseNum}}  心愿</text>
+          <text class='rate'>完成  {{item.finishedNum}}/{{item.totalNum}}</text>
+        </view>
+        <view class='goFinish' bindtap='goFinish'>去完成</view>
+      </view>
+      </block>
+      </view>
+    </view>
+  </view>
+  <view class="shop">
+    <view class="exchangeShop">
+      <view class="exchangeShop-top">
+        <view class="logo">心愿兑换商城</view>
+        <view class="record">
+          <text class='record-txt'>兑换记录</text>
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+      <block wx:for="{{exchangeShop}}" wx:key="index">
+        <view class="exchangeShop-contain">
+          <view class="ex-left">
+            <image src="{{item.shopUrl}}" />
+          </view>
+          <view class="ex-mid">
+            <view class="ex-mid__name">{{item.name}}</view>
+            <view class="ex-mid__cost">{{item.cost}}  心愿</view>
+          </view>
+          <view class="ex-right">
+            <image src="../../images/youjiantou.png" />
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

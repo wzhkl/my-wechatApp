@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "wux-cell": "../../components/dist/cell/index",
+    "wux-input": "../../components/dist/input/index",
+    "wux-input-number": "../../components/dist/input-number/index",
+    "wux-calendar": "../../components/dist/calendar/index",
+    "wux-switch": "../../components/dist/switch/index",
+    "wux-divider": "../../components/dist/divider/index"
+  },
+  "navigationBarTitleText": "发起抽奖"
+}

@@ -1,0 +1,21 @@
+<!--miniprogram/pages/record/record.wxml-->
+<view class="page">
+  <view class="container">
+    <view class="card">
+      <view class="img">
+        <image src="../../images/quotes.png" />
+      </view>
+
+      <view class="saying">
+        <view class="content">{{content}}</view>
+        <view class="author">{{author}}</view>
+      </view>
+
+      <view class="try">
+        <view class="text" bindtap='goIndex'>
+          没中过奖？去试试手气
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

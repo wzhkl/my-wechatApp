@@ -1,0 +1,105 @@
+<!--miniprogram/pages/user/user.wxml-->
+<view class="page">
+  <view class="container">
+    <view class="header">
+      <view class="header-top">
+        <view class="userInfo">
+          <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+            <image src="{{avatarUrl}}" />
+            <text class='username' decode="{{true}}">  {{username}} </text>
+          </button>
+        </view>
+        <view class="wish" bindtap='goSignIn'>
+          <view class='wishInner'>
+            <text decode="{{true}}">心愿  {{wishNum}}</text>
+            <image src="../../images/youjiantouZ.png" />
+          </view>
+        </view>
+      </view>
+      <view class="header-bottom">
+        <view class="allDraw header-bottom-item" bindtap='goAllDraw'>
+          <view class="allDrawNum">{{allDrawNum}}</view>
+          <view class="txt">全部抽奖</view>
+        </view>
+        <view class="launch header-bottom-item" bindtap='goInitiated'>
+          <view class="launchNum">{{launchNum}}</view>
+          <view class="txt">发起抽奖</view>
+        </view>
+        <view class="winning header-bottom-item" bindtap='goRecord'>
+          <view class="winningNum">{{winningNum}}</view>
+          <view class="txt">中奖记录</view>
+        </view>
+      </view>
+    </view>
+    <view class="body">
+      <view class="balance case" bindtap='goBalance'>
+        <view class="left">
+          <image src="../../images/balance.png" />
+          <text decode="true">  余额</text>
+        </view>
+        <view class="right">
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+      <view class="officialMall case" bindtap='goOfficialMall'>
+        <view class="left">
+          <image src="../../images/officialMall.png" />
+          <text decode="true">  官方商城</text>
+        </view>
+        <view class="right">
+          <text class='describe' decode="true">NoCode Store</text>
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+      <view class="personal case" bindtap='goPersonal'>
+        <view class="left">
+          <image src="../../images/personal.png" />
+          <text decode="true">  个人主页</text>
+        </view>
+        <view class="right">
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+      <view class="advanced case" bindtap='goAdvance'>
+        <view class="left">
+          <image src="../../images/v.png" />
+          <text decode="true">  高级版管理</text>
+        </view>
+        <view class="right">
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+      <view class="spread case" bindtap='goSpread'>
+        <view class="left">
+          <image src="../../images/spread.png" />
+          <text decode="true">  推广合作</text>
+        </view>
+        <view class="right">
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+      <view class="recommend case" bindtap='goRecommend'>
+        <view class="left">
+          <image src="../../images/recommend.png" />
+          <text decode="true">  小程序推荐</text>
+        </view>
+        <view class="right">
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+      <view class="more case" bindtap='goMore'>
+        <view class="left">
+          <image src="../../images/more.png" />
+          <text decode="true">  更多</text>
+        </view>
+        <view class="right">
+          <image src="../../images/youjiantou.png" />
+        </view>
+      </view>
+    </view>
+    <view class="footer">
+      <wux-divider text="XX科技出品" />
+      <view class="peopleNum">抽奖超过5000,000,000人次</view>
+    </view>
+  </view>
+</view>

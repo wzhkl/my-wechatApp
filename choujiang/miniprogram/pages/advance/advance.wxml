@@ -1,0 +1,11 @@
+<!--miniprogram/pages/advance/advance.wxml-->
+<view class="page">
+  <view class="container">
+    <block v-if="!advance">
+      <image src="../../images/abvanceBg.jpg" />
+    </block>
+  </view>
+  <view class="bottom">
+  <button class="initiate">再次购买高级版</button>
+  </view>
+</view>

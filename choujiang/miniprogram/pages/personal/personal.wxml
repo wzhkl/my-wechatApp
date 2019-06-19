@@ -1,0 +1,18 @@
+<!--miniprogram/pages/personal/personal.wxml-->
+<view class="page">
+  <view class="container">
+    <view class="header">
+      <view class="userName">{{userName}}</view>
+      <view class="count">累计中奖{{winningNum}}次</view>
+    </view>
+    <view class="body">
+      <view class="icon">
+        <image src="../../images/auth.png" />
+      </view>
+      <view class="title">发起人认证</view>
+      <view class="details">认证作用:抽奖发起人显示为认证品牌名，携带加V标识。如投放自助福利，认证用户将有更高几率被置顶展示，获得更多曝光转化。</view>
+      <view class="process">认证过程: 1、提供经营信息或凭证，2、提交审核判定。</view>
+      <view class="identify">开始认证</view>
+    </view>
+  </view>
+</view>

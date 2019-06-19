@@ -1,0 +1,144 @@
+/* miniprogram/pages/prizeDraw/prizeDraw.wxss */
+.pg {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  /* position: relative; */
+}
+.wux, .prizeTime, .more {
+  width: 100%;
+  background-color: #ffffff;
+}
+.bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+.initiate {
+  height: 35px;
+  line-height: 35px;
+  background-color: red;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+  border-radius: unset;
+}
+.top {
+  width: 100%;
+  height: 180px;
+  overflow:hidden; 
+  margin: 0px;
+  position: relative;
+  font-size: 16px;
+}
+.po-top {
+  height: 30px;
+  width: 100px;
+  margin-top: 5px;
+  margin-right: 5px;
+  background: #c0b8b1;
+  float: right;
+  border: 1px solid #c0b8b1;
+  border-radius: 20px;
+}
+.choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  margin: 3px;
+}
+.choose .icon image {
+  width: 20px;
+  height: 20px;
+}
+.time {
+  width: 100%;
+  font-size: 16px;
+  margin-top:10px;
+}
+.timeTop {
+  display: flex;
+  font-size: 12px;
+  padding: 10px;
+}
+.timeTop-left {
+  flex: 1;
+  opacity: 0.8;
+}
+input::-webkit-input-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+input {
+  width: 100%;
+  height: 70px;
+  white-space: pre-wrap;
+  background-color: #ffffff;
+}
+.timeTop-right {
+  display: flex;
+  color: #2b73ae;
+}
+.youjiantou {
+  height: 15px;
+  width: 15px;
+}
+.top_name .wux-input__extra{
+  color: #1a1a1a;
+}
+.prizeTime {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+.calendar {
+  flex: 1;
+}
+.more {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding:15px 0;
+}
+.describe {
+  flex: 1;
+  padding-left: 10px;
+}
+.describe-bottom {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.switch {
+  padding-right: 10px;
+}
+.others {
+  margin-top: 20px;
+}
+.otherFunc {
+  width: 100%;
+  display: flex;
+  margin-bottom:40px;
+}
+.game {
+  background-color: #ffffff;
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+.avater image {
+  width: 50px;
+  height: 50px;
+}
