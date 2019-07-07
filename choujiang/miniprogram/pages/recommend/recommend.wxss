@@ -16,5 +16,5 @@
   opacity: 0.8;
 }
 .title, .qq, .wx {
-  margin-bottom: 5px;
+  margin-bottom: 10rpx;
 }

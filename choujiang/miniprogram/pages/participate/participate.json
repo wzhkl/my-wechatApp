@@ -1,7 +1,8 @@
 {
   "usingComponents": {
+    "case": "../../components/case/case",
     "wux-divider": "../../components/dist/divider/index"
   },
-  "navigationBarTitleText": "我的",
+  "navigationBarTitleText": "参与详情",
   "enablePullDownRefresh": true
 }

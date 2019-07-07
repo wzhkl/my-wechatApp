@@ -10,43 +10,62 @@
   font-size: 16px;
   /* position: relative; */
 }
-.wux, .prizeTime, .more {
+.prizeTime, .more, .bottom, .input {
   width: 100%;
   background-color: #ffffff;
 }
+.prizeName, .prizePart {
+  display: flex;
+  padding: 0 20rpx;
+}
+.prizeName {
+  border-bottom: 1px solid #dbdbdb;
+}
+input {
+  height: 100rpx;
+  flex: 1;
+}
+.input .text {
+  text-align: center;
+  /* vertical-align:bottom; */
+  line-height: 140rpx;
+  margin-right: 30rpx;
+}
+.placeholder {
+  margin: 0 auto;
+}
 .bottom {
-  width: 100%;
   position: fixed;
   bottom: 0;
   z-index: 100;
 }
 .initiate {
-  height: 35px;
-  line-height: 35px;
+  height: 70rpx;
+  line-height: 70rpx;
   background-color: red;
   font-size: 16px;
   text-align: center;
   color: white;
-  margin: 10px;
+  margin: 20rpx;
   border-radius: unset;
 }
 .top {
   width: 100%;
-  height: 180px;
+  height: 360rpx;
   overflow:hidden; 
-  margin: 0px;
+  margin: 0rpx;
   position: relative;
   font-size: 16px;
 }
 .po-top {
-  height: 30px;
-  width: 100px;
-  margin-top: 5px;
-  margin-right: 5px;
+  height: 60rpx;
+  width: 200rpx;
+  margin-top: 10rpx;
+  margin-right: 10rpx;
   background: #c0b8b1;
   float: right;
   border: 1px solid #c0b8b1;
-  border-radius: 20px;
+  border-radius: 40rpx;
 }
 .choose {
   display: flex;
@@ -54,21 +73,21 @@
   justify-content: center;
   color: #fff;
   font-size: 12px;
-  margin: 3px;
+  margin: 6rpx;
 }
 .choose .icon image {
-  width: 20px;
-  height: 20px;
+  width: 40rpx;
+  height: 40rpx;
 }
 .time {
   width: 100%;
   font-size: 16px;
-  margin-top:10px;
+  margin-top: 20rpx;
 }
 .timeTop {
   display: flex;
   font-size: 12px;
-  padding: 10px;
+  padding: 20rpx;
 }
 .timeTop-left {
   flex: 1;
@@ -81,7 +100,7 @@ input::-webkit-input-placeholder {
 }
 input {
   width: 100%;
-  height: 70px;
+  height: 140rpx;
   white-space: pre-wrap;
   background-color: #ffffff;
 }
@@ -90,8 +109,8 @@ input {
   color: #2b73ae;
 }
 .youjiantou {
-  height: 15px;
-  width: 15px;
+  height: 30rpx;
+  width: 30rpx;
 }
 .top_name .wux-input__extra{
   color: #1a1a1a;
@@ -99,8 +118,7 @@ input {
 .prizeTime {
   display: flex;
   align-items: center;
-  padding-right: 10px;
-  margin-bottom: 10px;
+  padding-right: 20rpx;
 }
 .calendar {
   flex: 1;
@@ -109,36 +127,36 @@ input {
   width: 100%;
   display: flex;
   align-items: center;
-  padding:15px 0;
+  padding:40rpx 0;
 }
 .describe {
   flex: 1;
-  padding-left: 10px;
+  padding-left: 20rpx;
 }
 .describe-bottom {
   font-size: 12px;
   opacity: 0.8;
 }
 .switch {
-  padding-right: 10px;
+  padding-right: 20rpx;
 }
 .others {
-  margin-top: 20px;
+  margin-top: 40rpx;
 }
 .otherFunc {
   width: 100%;
   display: flex;
-  margin-bottom:40px;
+  margin-bottom: 80rpx;
 }
 .game {
   background-color: #ffffff;
   flex: 1;
-  padding: 10px;
-  margin: 5px;
+  padding: 20rpx;
+  margin: 10rpx;
   font-size: 12px;
   text-align: center;
 }
 .avater image {
-  width: 50px;
-  height: 50px;
+  width: 100rpx;
+  height: 100rpx;
 }

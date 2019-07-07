@@ -1,6 +1,6 @@
 <!--components/case/case.wxml-->
-<view class="case" bindtap='attach' wx:for="{{prize}}" wx:key="index">
-    <view class="container">
+<view class="case" wx:for="{{prize}}" wx:key="index">
+    <view class="container"  bindtap='goParticipate' data-prizeid="{{item.id}}">
         <view class="header">
             <image src="{{item.indexImgUrl}}" mode="scaleToFill" />
         </view>

@@ -1,10 +1,7 @@
 <!-- miniprogram/pages/prizeDraw/prizeDraw.wxml -->
 <view class="pg">
   <view class="container">
-    <view class="top" style="background:url('{{drawBgUrl}}'); background-size: 100% 100%;">
-      <!-- <wux-upload class="upload" style="width:30px; height:30px;" listType="picture-card" defaultFileList="{{ fileList }}" max="4" url="https://www.skyvow.cn/api/common/file" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview">
-        <text>上传图片</text>
-      </wux-upload> -->
+    <view class="top" style="background:url({{drawBgUrl}}); background-size: 100% 100%; ">
       <view class="po-top" bindtap='doUpload'>
         <view class="choose">
           <view class="icon">
@@ -14,13 +11,15 @@
         </view>
       </view>
     </view>
-    <view class="wux">
-      <wux-cell hover-class="none" style="font-size: 16px; width: 100%;">
-        <wux-input label="奖品名称" placeholder="请输入奖品名称" placeholder-style="margin: 0;" />
-      </wux-cell>
-      <wux-cell hover-class="none" style="font-size: 16px; width: 100%;">
-        <wux-input style="margin-right: 0;" class="top_name" extra="个" label="奖品份数" placeholder="份数" />
-      </wux-cell>
+    <view class="input">
+      <view class='prizeName'>
+        <view class='text'>奖品名称</view>
+        <input placeholder="请输入奖品名称" placeholder-class="placeholder" value='{{prizeName}}' bindinput='getPrizeName' />
+      </view>
+      <view class='prizePart'>
+        <view class='text'>奖品份数</view>
+        <input placeholder="份数" type='number' placeholder-class="placeholder" value='{{prizePart}}' bindinput='getPrizePart' />
+      </view>
     </view>
 
     <view class="time">
@@ -35,7 +34,7 @@
       </view>
       <view class="prizeTime">
         <wux-calendar id="wux-calendar" />
-        <wux-cell class="calendar" title="开奖时间" extra="{{ value1 }}" bind:click="openCalendar1"></wux-cell>
+        <wux-cell class="calendar" title="开奖时间" extra="{{ prizeTime }}" bind:click="getPrizeTime"></wux-cell>
         <image class="youjiantou" src="../../images/youjiantou.png" />
       </view>
     </view>
@@ -84,6 +83,6 @@
     
   </view>
 </view>
-<view class="bottom">
+<view class="bottom" bindtap='initiated'>
   <button class="initiate">发起新抽奖</button>
 </view>

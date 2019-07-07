@@ -14,7 +14,7 @@
       </view>
     </view>
   </view>
-  <view class="right">
+  <view class="right" bindtap='goCanvas'>
     <view class="makeWish">
       <image src="../../images/xuyuan.png" />
       <view class='hope'>心愿许愿</view>
@@ -24,20 +24,23 @@
     <view class='getDream'>
       <view class='getDream-top'>
         <view class='top-left'>连续签到七天领取33心愿</view>
-        <view class='top-right'>
-          <view class="rule" bindtap='goDeclare'>
-            <view class='wish'>规则说明</view>
+        <!-- <view class='top-right'> -->
+          <view class="rule top-right" bindtap='goDeclare'>
+            <text class='wish'>规则说明</text>
             <image src="../../images/youjiantou.png" />
           </view>
-        </view>
+        <!-- </view> -->
       </view>
       <view class='getDream-bd'>
         <view class='days'>
           <view class='day' wx:for="{{daily}}" wx:key="index">
             <view class="dayNum">第{{item.dayNum}}天</view>
-            <view class="wishNum">{{item.wishNum}}</view>
-            <block wx:if="{{gotIt}}">
+            <view class="wishNum {{item.flag ? 'getWishNum':''}}">{{item.wishNum}}</view>
+            <block wx:if="{{item.flag}}">
               <view class='got'>已领取</view>
+            </block>
+            <block wx:else>
+              <view class='notGet'>未领取</view>
             </block>
           </view>
         </view>

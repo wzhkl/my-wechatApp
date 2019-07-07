@@ -6,13 +6,13 @@
 }
 .container {
   width: 100%;
-  padding: 30px 10px;
+  padding: 60rpx 20rpx;
 }
 .header {
   width: 100%;
 }
 .title {
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
 }
 .title, .text, .card-content, .brand text {
   font-size: 14px;
@@ -21,37 +21,37 @@
 .cooperation {
   background-color: #ffffff;
   display: flex;
-  padding: 20px 30px;
-  border-radius:3px;
+  padding: 40rpx 60rpx;
+  border-radius: 6rpx;
 }
 .sponsor {
   border-left: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
-  margin:0 15px;
-  padding:0 15px;
+  margin:0 30rpx;
+  padding:0 30rpx;
 }
 .item {
   flex: 1;
   text-align: center;
 }
 .text {
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
 }
 .num {
   font-size: 18px;
   font-weight: bold;
 }
 .body {
-  margin: 30px 0;
+  margin: 60rpx 0;
 }
 .card {
   background-color: #ffffff;
-  padding: 20px 20px;
-  border-radius: 3px;
-  margin-bottom:10px;
+  padding: 40rpx 40rpx;
+  border-radius: 6rpx;
+  margin-bottom: 20rpx;
 }
 .card-title {
-  margin-bottom: 20px;
+  margin-bottom: 40rpx;
 }
 .card-content {
   display: -webkit-box;
@@ -67,15 +67,15 @@
 }
 .content {
   background-color: #ffffff;
-  padding: 10px 10px;
+  padding: 20rpx 20rpx;
 }
 .card-title text {
   font-size: 16px;
   font-weight: bold;
 }
 .card-title image {
-  width: 20px;
-  height: 20px;
+  width: 40rpx;
+  height: 40rpx;
   vertical-align:middle;
 }
 .img {
@@ -83,8 +83,8 @@
   text-align: center;
 }
 .img image {
-  width: 15px;
-  height: 15px;
+  width: 30rpx;
+  height: 30rpx;
 }
 .footer {
   width: 100%;
@@ -94,11 +94,11 @@
   flex-wrap: wrap;
 }
 .icon image {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
 }
 .brand {
-  margin: 10px 15px;
+  margin: 20rpx 30rpx;
   text-align: center;
 }

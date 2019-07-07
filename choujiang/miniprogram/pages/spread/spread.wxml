@@ -22,7 +22,7 @@
 
     <view class="body">
       <view class="title">我们期待为用户带来更多优质产品推荐。如果你有推广需求，我们提供如下对应方案:</view>
-      <block  wx:for="{{card}}" :key="index">
+      <block  wx:for="{{card}}" wx:key="index">
       <view class="card">
         <view class="card-title">
           <image src="{{item.url}}" />
@@ -40,7 +40,7 @@
       <view class="title">部分合作伙伴</view>
       <view class="content">
         <view class="brands">
-          <view class="brand" wx:for="{{partner}}" :key="index">
+          <view class="brand" wx:for="{{partner}}" wx:key="index">
             <view class="icon"><image src="{{item.img}}" /></view>
             <text>{{item.name}}</text>
           </view>

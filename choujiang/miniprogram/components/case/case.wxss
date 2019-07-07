@@ -17,14 +17,18 @@
     color: #c51f05;
 }
 .header {
-    height: 147px;
+    /* height: 147px; */
+    padding:10px 0;
+    text-align: center;
 }
 .header image {
-    height: 100%;
-    width: 100%;
-    display: inline-block;
-    border-top-left-radius:3px;
-    border-top-right-radius:3px;
+  height:150px;
+  width:150px;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* display: inline-block; */
+    /* border-top-left-radius:3px;
+    border-top-right-radius:3px; */
 }
 .bd {
     /* height: 56px; */

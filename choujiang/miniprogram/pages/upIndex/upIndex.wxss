@@ -4,8 +4,8 @@
   height: 100%;
 }
 .box {
-  margin: 15px;
-  padding: 15px;
+  margin: 30rpx;
+  padding: 30rpx;
 }
 .daily {
   border: 1px solid #fcecea;
@@ -14,20 +14,20 @@
   border: 1px solid #b67e3e;
 }
 .top {
-  margin: 15px 0;
+  margin: 30rpx 0;
   font-size: 20px;
   font-weight: bold;
 }
 .body {
-  margin: 15px 0;
+  margin: 30rpx 0;
   font-size: 16px;
 }
 .describe {
-  padding-bottom: 15px;
+  padding-bottom: 30rpx;
 }
 .flex {
   display: flex;
-  margin-top: 20px;
+  margin-top: 40rpx;
 }
 .left {
   flex: 1;
@@ -36,38 +36,38 @@
   flex: 1;
 }
 .flex image, .last image {
-  width: 15px;
-  height: 15px;
+  width: 30rpx;
+  height: 30rpx;
 }
 .footer {
   border-color: #ffffff;
 }
 .contact {
-  width:100px;
-  padding: 10px;
+  width: 200rpx;
+  padding: 20rpx;
   background-color: #fcecea;
   color: #ec382a;
   position: relative;
-  margin:10px 0;
+  margin: 20rpx 0;
 }
 .submit {
-  padding: 10px;
+  padding: 20rpx;
   background-color: #fbf3d9;
   color: #b67e3e;
   position: relative;
-  margin:10px 0;
-  width:100px;
+  margin: 20rpx 0;
+  width: 200rpx;
 }
 .contact image, .submit image {
-  width: 20px;
-  height: 20px;
+  width: 40rpx;
+  height: 40rpx;
   vertical-align: bottom;
   /* position: absolute; */
   right: 0;
 }
 .share image {
-  width: 20px;
-  height: 20px;
+  width: 40rpx;
+  height: 40rpx;
   vertical-align:middle;
 }
 .share button {
@@ -81,5 +81,5 @@ button::after{
   border: none;
 }
 .last {
-  margin: 20px;
+  margin: 40rpx;
 }

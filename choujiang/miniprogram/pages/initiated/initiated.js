@@ -1,4 +1,6 @@
 // miniprogram/pages/initiated/initiated.js
+wx.cloud.init();
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -6,12 +8,12 @@ Page({
    */
   data: {
     prize: [
-      {
-        indexImgUrl: '../../images/yijiashouji.jpeg',
-        sponsor: '一加官方商城',
-        describe: '一加6T手机',
-        prizeDay: '06月20日 10:00'
-      }
+      // {
+      //   indexImgUrl: '../../images/yijiashouji.jpeg',
+      //   sponsor: '一加官方商城',
+      //   describe: '一加6T手机',
+      //   prizeDay: '06月20日 10:00'
+      // }
     ]
   },
 
@@ -19,6 +21,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this;
+    db.collection('initiatedDraw').where({
+      _openid: 'omuXr4vmJTbXAuIKg04b-LEDnI9I'
+    }).get({
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          prize: res.data.slice()
+        })
+      }
+    })
 
   },
 

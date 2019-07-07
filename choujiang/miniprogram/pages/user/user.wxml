@@ -11,7 +11,7 @@
         </view>
         <view class="wish" bindtap='goSignIn'>
           <view class='wishInner'>
-            <text decode="{{true}}">心愿  {{wishNum}}</text>
+            <text decode="{{true}}">心愿&nbsp;{{userWishNum}}</text>
             <image src="../../images/youjiantouZ.png" />
           </view>
         </view>

@@ -12,9 +12,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // wx.redirectTo({
+    //   url: '../prizeDraw/prizeDraw'
+    // })
     wx.navigateTo({
       url: '../prizeDraw/prizeDraw'
     })
+    // wx.reLaunch({
+    //   url: '../prizeDraw/prizeDraw'
+    // })
   },
 
   /**
@@ -28,7 +34,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    // wx.navigateTo({
+    //   url: '../prizeDraw/prizeDraw'
+    // })
   },
 
   /**

@@ -1,5 +1,8 @@
 // miniprogram/pages/user/user.js
 const app = getApp()
+// 初始化数据库
+wx.cloud.init();
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -8,19 +11,41 @@ Page({
   data: {
     username: '请先登录',
     avatarUrl: '../../images/avatar.png',
-    allDrawNum: 30,
-    launchNum: 2,
-    winningNum: 8
+    allDrawNum: 0,
+    launchNum: 0,
+    winningNum: 0,
+    userWishNum: 0
   },
 
   onGotUserInfo: function (e) {
-    let that = this;
-    console.log(e)
-    console.log(app)
+    // let that = this;
+    // console.log(e)
     app.globalData.userName = e.detail.userInfo.nickName,
+      db.collection('DrawPrizeInfo').where({
+      _openid: 'omuXr4vmJTbXAuIKg04b-LEDnI9I',
+    }).get().then(res => {
+      console.log('这是全部抽奖信息', res)
+      this.setData({
+        allDrawNum: res.data.length
+      })
+    }).catch(err => {
+      console.log(err)
+    });
+    db.collection('initiatedDraw').where({
+      _openid: 'omuXr4vmJTbXAuIKg04b-LEDnI9I',
+    }).get().then(res => {
+      console.log('这是发起抽奖信息', res)
+      this.setData({
+        launchNum: res.data.length
+      })
+    }).catch(err => {
+      console.log(err)
+    })
     this.setData({
       username: app.globalData.userName,
-      avatarUrl: e.detail.userInfo.avatarUrl
+      avatarUrl: e.detail.userInfo.avatarUrl,
+      winningNum: app.globalData.winningNum,
+      userWishNum: app.globalData.wishNum
     })
 
   },
@@ -51,19 +76,19 @@ Page({
       url: '../balance/balance'
     })
   },
-  goOfficialMall() {
-    wx.navigateToMiniProgram({
-      appId: 'wxafa4a9e3789623a7',
-      path: '',
-      extraData: {
-        foo: 'bar'
-      },
-      envVersion: 'develop',
-      success(res) {
-        console.log('打开成功')
-      }
-    })
-  },
+  // goOfficialMall() {
+  //   wx.navigateToMiniProgram({
+  //     appId: 'wxafa4a9e3789623a7',
+  //     path: '',
+  //     extraData: {
+  //       foo: 'bar'
+  //     },
+  //     envVersion: 'develop',
+  //     success(res) {
+  //       console.log('打开成功')
+  //     }
+  //   })
+  // },
   goPersonal() {
     wx.navigateTo({
       url: '../personal/personal'
@@ -108,9 +133,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      wishNum: app.globalData.wishNum
-    })
+
   },
 
   /**

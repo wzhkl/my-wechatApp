@@ -12,7 +12,7 @@
 
     <view class="over">
       <view class="over-title">已结束</view>
-      <block wx:for="{{prize}}" wx:key="index">
+      <block wx:for="{{outPrize}}" wx:key="index">
         <view class="over-prize">
           <text class="prize" decode="{{true}}">奖品:&ensp;{{item.describe}}</text>
           <view class="right">

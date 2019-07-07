@@ -1,5 +1,8 @@
 // miniprogram/pages/prizeDraw/prizeDraw.js
-import { $wuxCalendar } from '../../components/dist/index'
+import { $wuxCalendar } from '../../components/dist/index';
+// 初始化数据库
+wx.cloud.init();
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -8,20 +11,19 @@ Page({
   data: {
     drawBgUrl: '../../images/imgFileBg.jpg',
     fileList: [],
-    value1: [],
-    value2: [],
-    value3: [],
-    value4: [],
-    ischoose: false
+    ischoose: false,
+    prizeName: '',
+    prizePart: '',
+    prizeTime: []
   },
 
-  openCalendar1() {
+  getPrizeTime() {
     $wuxCalendar().open({
-        value: this.data.value1,
+      value: this.data.prizeTime,
         onChange: (values, displayValues) => {
             console.log('onChange', values, displayValues)
             this.setData({
-                value1: displayValues,
+              prizeTime: displayValues,
             })
         },
     })
@@ -38,73 +40,87 @@ Page({
 
   // 上传图片
   doUpload: function () {
+    let that = this;
+    // wx.cloud.init();
+    // 选择图片
     wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
       success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths
-        wx.uploadFile({
-          url: '', //仅为示例，非真实的接口地址
-          filePath: tempFilePaths[0],
-          name: 'file',
-          // formData: {
-          //   'user': 'test'
-          // },
-          success(res) {
-            console.log('this is res',res);
-            // const data = res.data
-            //do something
-          }
+        console.log(tempFilePaths);
+        wx.cloud.uploadFile({
+          cloudPath: 'background.png', // 上传至云端的路径
+          filePath: tempFilePaths[0], // 临时文件文件路径
+        }).then(res => {
+          // 返回文件的 ID
+          // console.log(res.fileID)
+          db.collection('prizeDrawImage').add({
+            data: {
+              fileID: res.fileID
+            }
+          }).then(res => {
+            console.log('----', res)
+            db.collection('prizeDrawImage').where({
+              _openid: 'omuXr4vmJTbXAuIKg04b-LEDnI9I'
+            }).get().then(res => {
+              console.log('加载的图片', res)
+              that.setData({
+                drawBgUrl: res.data[0].fileID
+              })
+              console.log('背景图', that.data.drawBgUrl)
+            })
+          }).catch(error => {
+            console.log(error)
+          })
+        }).catch(error => {
+          console.log(error)
         })
       }
     })
-    // 选择图片
-    // wx.cloud.init();
-    // wx.chooseImage({
-    //   count: 1,
-    //   sizeType: ['compressed'],
-    //   sourceType: ['album', 'camera'],
-    //   success: function (res) {
+  },
 
-    //     wx.showLoading({
-    //       title: '上传中',
-    //     })
-    //     console.log(res.tempFilePaths)
-    //     const filePath = res.tempFilePaths[0]
-        
+  getPrizeName(e) {
+    this.setData({
+      prizeName: e.detail.value
+    })
+  },
+  getPrizePart(e) {
+    this.setData({
+      prizePart: e.detail.value
+    })
+    // console.log(this.data.prizePart)
+  },
 
-    //     // 上传图片
-    //     const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
-    //     wx.cloud.uploadFile({
-    //       cloudPath,
-    //       filePath,
-    //       success: res => {
-    //         console.log('[上传文件] 成功：', res)
+  initiated() {
+    db.collection('initiatedDraw').add({
+      data: {
+        prizeName: this.data.prizeName,
+        prizeTime: this.data.prizeTime,
+        prizePart: this.data.prizePart
+      }
+    }).then(res => {
+      console.log(res)
+      wx.showLoading({
+        title: '发起抽奖中',
+      })
 
-    //         app.globalData.fileID = res.fileID
-    //         app.globalData.cloudPath = cloudPath
-    //         app.globalData.imagePath = filePath
+      setTimeout(function () {
+        wx.hideLoading()
+        wx.showToast({
+          title: '发起成功',
+          icon: 'success',
+          duration: 1000
+        })
+      }, 2000)
 
-    //         wx.navigateTo({
-    //           url: '../storageConsole/storageConsole'
-    //         })
-          },
-  //         fail: e => {
-  //           console.error('[上传文件] 失败：', e)
-  //           wx.showToast({
-  //             icon: 'none',
-  //             title: '上传失败',
-  //           })
-  //         },
-  //         complete: () => {
-  //           wx.hideLoading()
-  //         }
-  //       })
-
-  //     },
-  //     fail: e => {
-  //       console.error(e)
-  //     }
-  //   })
-  // },
+    }).catch(err => {
+      console.log(err)
+    })
+    
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -131,14 +147,17 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    wx.switchTab({
+    // wx.switchTab({
+    //   url: '../index/index'
+    // })
+    wx.reLaunch({
       url: '../index/index'
     })
   },

@@ -1,0 +1,41 @@
+<!--miniprogram/pages/participate/participate.wxml-->
+<view class="page">
+  <view class="container">
+    <view class="top">
+        <view class="header">
+            <image src="{{prize.indexImgUrl}}" mode="scaleToFill" />
+        </view>
+        <view class="bd">
+            <view class="sponsor">{{prize.sponsor}}<text decode="{{true}}"> 赞助</text></view>
+            <view class="describe">
+                <text decode="{{true}}">奖品: {{prize.describe}}</text>
+            </view>
+            <view class="prize-day">{{prize.prizeDay}}<text decode="{{true}}">&emsp;自动开奖</text></view>
+        </view>
+      
+    </view>
+    <view class="middle">
+      <image src="../../images/quotes.png" />
+      <view class="text">
+        承载着你的万千心愿
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="participate" bindtap='participate'>{{participateStatus}}</view>
+      <view class="participator">
+        <text >已有{{prize.participator}}人参与，查看全部</text>
+        <image src="../../images/youjiantou.png" />
+      </view>
+    </view>
+    <wux-divider text=" advertisement " />
+    <view class='ad'>
+      <view class='ad-img'>
+        <image src='../../images/spread.png'></image>
+      </view>
+    </view>
+    <view class="share">
+      <button class="initiate" open-type='share'>分享给朋友</button>
+      <!-- <view class='text'>继续上滑，更多奖品等着你</view> -->
+    </view>
+  </view>
+</view>

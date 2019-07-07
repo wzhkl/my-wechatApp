@@ -9,22 +9,7 @@ Component({
       type:[],
       value:''
     }
-    // indexImgUrl: {
-    //   type: null,
-    //   value: '../../images/yijiashouji.jpeg'
-    // },
-    // sponsor: {
-    //   type: String,
-    //   value: '一加官方商城'
-    // },
-    // describe: {
-    //   type: String,
-    //   value: '一加6T手机(颜色可选)'
-    // },
-    // prizeDay: {
-    //   type: null,
-    //   value: '05月20日 10:00'
-    // }
+    
   },
 
   /**
@@ -38,10 +23,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    attach: function(e) {
-      console.log(this.properties.describe)
-      console.log('-----',this.data)
-      console.log(this.dataset)
+    goParticipate: function(event) {
+      console.log(event.currentTarget.dataset.prizeid);
+      // 根据奖品的ID, 跳转到奖品对应的参与详情
+      wx.navigateTo({
+        url: `../participate/participate?prizeid=${event.currentTarget.dataset.prizeid}`
+      });
     }
   }
 })

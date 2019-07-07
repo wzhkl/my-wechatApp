@@ -1,5 +1,8 @@
 // miniprogram/pages/signIn/signIn.js
 const app = getApp();
+// 初始化数据库
+wx.cloud.init();
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -7,13 +10,13 @@ Page({
    */
   data: {
     daily: [
-      {dayNum: '一', wishNum: 1},
-      {dayNum: '二', wishNum: 1},
-      { dayNum: '三', wishNum: 2 },
-      { dayNum: '四', wishNum: 3 },
-      { dayNum: '五', wishNum: 5 },
-      { dayNum: '六', wishNum: 8 },
-      { dayNum: '七', wishNum: 13 }
+      {dayNum: '一', wishNum: 1, flag: false},
+      { dayNum: '二', wishNum: 1, flag: false},
+      { dayNum: '三', wishNum: 2, flag: false},
+      { dayNum: '四', wishNum: 3, flag: false },
+      { dayNum: '五', wishNum: 5, flag: false},
+      { dayNum: '六', wishNum: 8, flag: false},
+      { dayNum: '七', wishNum: 13, flag: false}
     ],
     task: [
       { work: '参与首页抽奖3次',
@@ -68,14 +71,42 @@ Page({
     ],
     // heartNum: 2,
     wishNum: app.globalData.wishNum,
-    gotIt: false,
+    // gotIt: false,
     signInStatus: true
   },
-
+  
+  
   signInGet() {
+    let now = new Date().getTime();
+    let daily = this.data.daily
+    let state = daily.find(item => item.flag === false);
+    state.flag = true;
+    let id = daily.findIndex(item => item.flag === state.flag);
+    // 获取第二天凌晨的时间(从1970.1.1开始的毫秒数)
+    let tomorrow = new Date(new Date().getTime() + 86400000 - (new Date().getHours() * 60 * 60 + new Date().getMinutes() * 60 + new Date().getSeconds()) * 1000).getTime();
+    // 现在时间到第二天凌晨的毫秒数
+    let delay = tomorrow - now;
+    daily[id] = state;
+    // console.log(daily,daily[id],'state', state, "id", id);
+    // 设置定时器
+    setTimeout(() => {
+      signInStatus: true
+    }, delay)
     this.setData({
       signInStatus: false,
-      gotIt: true
+      daily
+    })
+
+  },
+
+  goFinish() {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+  goCanvas() {
+    wx.navigateTo({
+      url: '../canvas/canvas',
     })
   },
 

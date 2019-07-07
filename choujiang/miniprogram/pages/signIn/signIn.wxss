@@ -3,31 +3,32 @@
   width: 100%;
   height: 100%;
   background: #f4f3ec;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
 }
 .header {
   width: 100%;
-  height: 82px;
-  padding-top: 15px;
-  /* padding-bottom: 20px; */
+  height: 164rpx;
+  padding-top: 30rpx;
+  /* padding-bottom: 20rpx; */
   /* background: #ddd; */
 }
 .getDream-ft button {
+  outline: none;
   background-color: #e6d0b4;
 }
 .left {
   display: flex;
-  /* height: 100px;
-  width: 100px; */
-  padding-top: 15px;
+  /* height: 100rpx;
+  width: 100rpx; */
+  padding-top: 30rpx;
 }
 .heart image{
-  height: 45px;
-  width: 45px;
+  height: 90rpx;
+  width: 90rpx;
 }
 .heart {
-  padding-right: 10px;
+  padding-right: 20rpx;
 }
 .details {
   font-size: 10px;
@@ -35,31 +36,31 @@
   align-items: center;
 }
 .details image, .rule image {
-  width: 20px;
-  height: 20px;
+  width: 40rpx;
+  height: 40rpx;
 }
 .right {
-  width: 87px;
-  height: 26px;
-  /* padding-top: 15px; */
+  width: 174rpx;
+  height: 52rpx;
+  /* padding-top: 15rpx; */
   position: absolute;
-  top: 40px;
+  top: 80rpx;
   right: 0;
   border-top: 1px solid #dad5d5;
   border-left: 1px solid #dad5d5;
   border-bottom: 1px solid #dad5d5;
-  border-radius: 15px 0px 0px 15px;
-  box-shadow: 0px 0px 5px 2px #dfdfdc;
+  border-radius: 30rpx 0rpx 0rpx 30rpx;
+  box-shadow: 0rpx 0rpx 10rpx 4rpx #dfdfdc;
 }
 .right image, .record image, .ex-right image {
-  width: 16px;
-  height: 16px;
+  width: 32rpx;
+  height: 32rpx;
   vertical-align: middle;
 }
 .makeWish {
   display: flex;
   align-items: center;
-  margin: 5px;
+  margin: 10rpx;
 }
 .hope, .rate, .record-txt {
   font-size: 10px;
@@ -72,13 +73,13 @@
   height: 100%;
   width: 100%;
   border: 1px solid #dad5d5;
-  border-radius: 4px;
+  border-radius: 8rpx;
   box-sizing: border-box;
   background: #fff;
-  margin-top: 10px;
+  margin-top: 20rpx;
 }
 .getDream, .task, .exchangeShop {
-  margin: 10px;
+  margin: 20rpx;
 }
 .rule {
   font-size: 10px;
@@ -89,18 +90,18 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #dad5d5;
-  padding-bottom: 10px;
+  padding-bottom: 20rpx;
   position: relative;
 }
-.top-right {
-  padding-left: 50px;
+.getDream-top {
+  justify-content: space-between;
 }
 .getDream-bd {
-  padding-top: 10px;
+  padding-top: 20rpx;
 }
 .dayNum {
   font-size: 12px;
-  padding-bottom: 10px;
+  padding-bottom: 20rpx;
 }
 .days, .flex{
 display: flex;
@@ -108,25 +109,37 @@ align-items: center;
 position: relative;
 }
 .flex {
-  margin-top: 10px;
+  margin-top: 20rpx;
 }
 .day {
-  margin: 5px;
+  margin: 10rpx;
+  flex: 1;
 }
 .wishNum {
   border: 1px solid #dad5d5;
   border-radius: 50%;
-  text-align: center;
+  width: 60rpx;
+  height: 60rpx;
+  margin:0 auto;
+  line-height: 60rpx;
+  text-align:center;
+}
+.getWishNum {
+  background-color: #e6d0b4;
 }
 .got {
+  color: #fcb14f;
+}
+.notGet, .got {
   font-size: 12px;
-  opacity: 0.7;
+  opacity: 0.4;
+  margin-top: 14rpx;
 }
 .getDream-ft {
-  margin-top: 10px;
+  margin-top: 20rpx;
 }
 .taskDetail, .footer {
-  margin-top: 10px;
+  margin-top: 20rpx;
 }
 .condition {
   font-size: 10px;
@@ -136,10 +149,10 @@ position: relative;
   font-weight: bold;
 }
 .goFinish {
-  padding: 3px 15px;
+  padding: 6rpx 30rpx;
   border: 1px solid #e6d0b4;
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: 30rpx;
   font-size: 15px;
   color: #fcb14f;
   position: absolute;
@@ -149,7 +162,7 @@ position: relative;
   font-size: 15px;
 }
 .rate {
-  margin-left: 10px;
+  margin-left: 20rpx;
 }
 .record {
   position: absolute;
@@ -157,9 +170,9 @@ position: relative;
 }
 .exchangeShop-contain {
   width: 100%;
-  height: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  height: 200rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
   border-top: 1px solid #dad5d5;
   display: flex;
   vertical-align: middle;
@@ -169,7 +182,7 @@ position: relative;
   font-size: 15px;
   flex-grow: 1;
   position: relative;
-  left: 20px;
+  left: 40rpx;
 }
 .ex-mid__name {
   position: absolute;
@@ -181,7 +194,7 @@ position: relative;
   color: #fcb14f;
 }
 .ex-left image {
-  width: 100px;
+  width: 200rpx;
   height: 100%;
 }
 .ex-right {

@@ -3,12 +3,12 @@
   <view class="container">
 
     <view class="over">
-      <view class="over-title">已结束</view>
+      <view class="over-title">我发起的</view>
       <block wx:for="{{prize}}" wx:key="index">
         <view class="over-prize">
-          <text class="prize" decode="{{true}}">奖品:&ensp;{{item.describe}}</text>
+          <text class="prize" decode="{{true}}">奖品:&ensp;{{item.prizeName}}</text>
           <view class="right">
-            <text class="prizeDay" decode="{{true}}">{{item.prizeDay}}&emsp;</text>
+            <text class="prizeDay" decode="{{true}}">{{item.prizeTime}}&emsp;</text>
             <image src="../../images/youjiantou.png" />
           </view>
           

@@ -1,12 +1,13 @@
 {
   "pages": [
     "pages/user/user",
+    "pages/index/index",
+    "pages/participate/participate",
     "pages/spread/spread",
     "pages/record/record",
     "pages/initiated/initiated",
     "pages/allDraw/allDraw",
     "pages/prizeDraw/prizeDraw",
-    "pages/index/index",
     "pages/signIn/signIn",
     "pages/upIndex/upIndex",
     "pages/pageTum/pageTum",
@@ -24,6 +25,9 @@
     "navigationBarTitleText": "微信抽奖",
     "navigationBarTextStyle": "black"
   },
+  "navigateToMiniProgramAppIdList": [
+    "wxafa4a9e3789623a7"
+  ],
   "tabBar": {
     "list": [
       {
